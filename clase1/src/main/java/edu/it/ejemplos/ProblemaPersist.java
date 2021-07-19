@@ -4,16 +4,19 @@ import edu.it.components.ConectorJPA;
 import edu.it.components.GeneradorUsuarios;
 import javax.persistence.EntityTransaction;
 
-public class EjemploInsercion implements Runnable {
+public class ProblemaPersist implements Runnable {
     public void run() {
         var em = new ConectorJPA().getEntityManager();
 
-        for (;;) {
+        // for (int x: new int[2]) {
             var usu = GeneradorUsuarios.generarUsuario();
+            usu.id = "1234";
+            System.out.println("Voy a insertar el objeto");
+            System.out.println(usu);
             EntityTransaction tx = em.getTransaction();
             tx.begin();
-            em.persist(usu);
+            em.merge(usu);
             tx.commit();
-        }
+        // }
     }
 }
