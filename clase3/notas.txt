@@ -33,5 +33,68 @@ Muchos a muchos
 En la tabla intermedia, ver si podemos poner mas datos
 
 
+Persona {}
+
+Cliente extends Persona {} idMovil, imai
+Comprador extends Persona {}
+Empleado extends Persona
+
+1) Herencia de tipos o dto o estructuras ------ NO
+
+Cliente {
+  Persona p = null
+  Imai i = new Imai()
+}
+
+2) Herencia de funcionalidad ------------ NO pero hay eceptiones.
+
+conneccion {
+   public conn connectar() {
+      a una red por ssh
+   }
+}
+
+ConnectionWebSocket extends conneccion {
+   public connectar(fn) {
+      conectar pero por webscoket
+      cuando termina de conectarse te llama a la funcion
+   }
+}
+
+
+3) Herencia en interfaces ? Utilizar siempre con el principio de Interface Segregation
+
+interface subible {}
+interface bajble  {}
+
+Manipular extends subible, bajable {
+     
+}
+
+BajarTodo(Bajable[] elementoParaApgar) {
+   for each y bajas todo
+}
+
+https://en.wikipedia.org/wiki/Interface_segregation_principle#:~:text=In%20the%20field%20of%20software,methods%20it%20does%20not%20use.&text=ISP%20is%20intended%20to%20keep,refactor%2C%20change%2C%20and%20redeploy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
