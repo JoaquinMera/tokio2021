@@ -1,0 +1,37 @@
+Api de streams
+
+Promociones
+
+Me traigo todos los registros.
+
+
+.filter(z -> z.entidad == 'coto')
+.filter(z -> z.comprador.edad > 60)
+.filter(z -> z.compra.tarjeta.tipo == 'visa')
+.collect(toList)
+   .todosLosMetodosDeUnaLista
+
+
+resultado.porcDescuento aplicar al monto
+
+Si queremos aprender programacion funcional ?
+
+javascript (consola de chrome o nodejs)
+
+[].filter
+[].map
+[].reduce
+
+Ejercicio para el Lunes 26 
+--------------------------
+
+JPQL
+Hacer un select de cantidad promedio de salario
+pero agrupado por pais
+
+Muchos a muchos
+En la tabla intermedia, ver si podemos poner mas datos
+
+
+
+
