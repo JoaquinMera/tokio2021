@@ -1,7 +1,6 @@
 package edu.it;
 
-import edu.it.ejemplos.FormatoEjemplo;
-import edu.it.ejemplos.InsertarPeliculasDirectores;
+import edu.it.ejemplos.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -15,7 +14,10 @@ public class ClasePrincipal implements CommandLineRunner {
     @Autowired
     InsertarPeliculasDirectores insertarPeliculasDirectores;
 
+    @Autowired
+    Queries queries;
+
     public void run(String... args) throws Exception {
-        insertarPeliculasDirectores.run();
+        queries.run();
     }
 }
